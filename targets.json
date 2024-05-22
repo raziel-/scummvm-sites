@@ -11333,7 +11333,7 @@
         ]
     },
     {
-        "name": "Director-Tests",
+        "name": "Director-Tests (D2-mac)",
         "game_id": "director",
         "autodetect": true,
         "directory": "director-tests/D2-mac",
@@ -11346,7 +11346,7 @@
         ]
     },
     {
-        "name": "Director-Tests",
+        "name": "Director-Tests (D3-mac)",
         "game_id": "director",
         "autodetect": true,
         "directory": "director-tests/D3-mac",
@@ -11375,7 +11375,7 @@
         ]
     },
     {
-        "name": "Director-Tests",
+        "name": "Director-Tests (D4-mac)",
         "game_id": "director",
         "autodetect": true,
         "directory": "director-tests/D4-mac",
@@ -11411,7 +11411,7 @@
         ]
     },
     {
-        "name": "Director-Tests",
+        "name": "Director-Tests (D4-win)",
         "game_id": "director",
         "autodetect": true,
         "directory": "director-tests/D4-win",
@@ -11439,7 +11439,7 @@
             "INK8B-9.DIR",
             "INK8COL.DIR",
             "PALSWITC.DIR",
-            "SOFT1.DXR",
+            "SOFT1.DXR"
         ]
     },
     {
