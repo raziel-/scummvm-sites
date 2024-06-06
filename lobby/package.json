@@ -18,6 +18,8 @@
   "homepage": "https://github.com/scummvm/scummvm-sites#readme",
   "dependencies": {
     "bent": "^7.3.12",
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
     "ioredis": "^4.27.7",
     "js-yaml": "^4.1.0",
     "logging": "^3.3.0",

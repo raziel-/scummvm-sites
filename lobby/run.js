@@ -43,6 +43,11 @@ const credentials = {
         client: process.env.DISCORD_CLIENT,
         token: process.env.DISCORD_TOKEN,
         channel: process.env.DISCORD_CHANNEL,
+    },
+    webhook: {
+        host: process.env.WEBHOOK_HOST,
+        port: process.env.WEBHOOK_PORT,
+        token: process.env.WEBHOOK_TOKEN,
     }
 };
 
@@ -65,6 +70,7 @@ if (cluster.isMaster) {
     const NetworkListener = require('./net/NetworkListener');
     const Redis = require('./database/Redis');
     const Discord = require('./discord/Discord');
+    const InternalWebhook = require('./webhook/InternalWebhook');
     global.server = new NetworkListener(config['network'])
     global.redis = new Redis(credentials.redis);
     if (process.env.DATABASE == 'web') {
@@ -82,6 +88,10 @@ if (cluster.isMaster) {
 
     if (process.env.FIRST_WORKER && credentials.discord.client) {
       global.discord = new Discord(credentials['discord']);
+    }
+
+    if (process.env.FIRST_WORKER) {
+        global.webhook = new InternalWebhook(credentials['webhook']);
     }
 
     // Handle messages from other processes.
