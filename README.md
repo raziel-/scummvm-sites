@@ -21,8 +21,6 @@ This has been achieved. It reports changes on our discord channel.
 ## How to add a new test target:
 
 - Create a directory with all the files to be tested,
-- include a scummvm.conf with the game_id:
-    cd /path/to/game && /path/to/scummvm -c scummvm.conf -p . --add
 - in scummvm.conf: change the pathline to: path=.
 - add an entry in targets.json
  {
@@ -31,6 +29,7 @@ This has been achieved. It reports changes on our discord channel.
         "game_id": "warlock-win",
         "platform": "win",
         "version": "D3",
+        "autodetect": true,
         "debugflags": "fewframesonly,fast",
         "movienames": ["moviename", ....]
  }
