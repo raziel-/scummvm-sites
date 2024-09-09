@@ -63,6 +63,11 @@ class InternalWebhook {
                   // Not logged in.
                   continue;
                 users[userId] = user;
+                const ongoingResultsStrings = await redis.getOngoingResults(userId, user.game);
+                const ongoingResults = Object.fromEntries(
+                    Object.entries(ongoingResultsStrings).map(([k, stat]) => [k, Number(stat)])
+                );
+                users[userId]["ongoingResults"] = ongoingResults;
             }
             res.status(200).json({users: users})
         });
